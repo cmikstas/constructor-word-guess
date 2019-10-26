@@ -16,7 +16,7 @@ var Letter = function(letter)
         }
     }
 
-    this.guessedLetter = function()
+    this.guessedLetter = function(letter)
     {
         if(letter.toLowerCase() === this.letter)
         {

@@ -1,9 +1,10 @@
 var fs = require("fs");
 var inquirer = require("inquirer");
+var Word = require("./word");
 
-readFileFunction();
+wordGenerator();
 
-function readFileFunction()
+function wordGenerator()
 {
     fs.readFile("./word-guess.txt", "utf8", function(error, data)
     {
@@ -19,5 +20,9 @@ function readFileFunction()
         var randomWord = dataArray[Math.floor(Math.random()*dataArray.length)];
         console.log(randomWord);
 
+        var wordToGuess = new Word(randomWord);
+        console.log(wordToGuess.grabWord());
+        wordToGuess.letterGuess("a");
+        console.log(wordToGuess.grabWord());
     });
 }

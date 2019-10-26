@@ -1,4 +1,4 @@
-var letterFile = require("./letter");
+var Letter = require("./letter");
 
 var Word = function(word)
 {
@@ -11,22 +11,27 @@ var Word = function(word)
         this.lettersArray.push(new Letter(charArray[i]))
     }
 
-    var wordString = "";
+    console.log(this.lettersArray.length);
 
     this.grabWord = function()
     {
-        for (var i = 0; i < lettersArray.length; i++)
+        var wordString = "";
+
+        for (var i = 0; i < this.lettersArray.length; i++)
         {
-            wordString += lettersArray[i].grabLetter() + " ";
-            return wordString;
+            wordString += this.lettersArray[i].grabLetter() + " ";
         }
+
+        return wordString;
     }
 
     this.letterGuess = function(letter)
     {
-        for (var i = 0; i < lettersArray.length; i++)
+        for (var i = 0; i < this.lettersArray.length; i++)
         {
-            lettersArray[i].guessedLetter(letter);
+            this.lettersArray[i].guessedLetter(letter);
         }
     }
 }
+
+module.exports = Word;
