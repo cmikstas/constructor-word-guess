@@ -70,6 +70,7 @@ function wordGenerator()
                 wordToGuess.letterGuess(letterGuessed);
                 console.log(wordToGuess.grabWord());
 
+                // this checks to see if correct letter has already been guessed.
                 if (randomWord.includes(letterGuessed) && correctGuess.includes(letterGuessed))
                 {   
                     console.log("\n");
@@ -80,6 +81,7 @@ function wordGenerator()
                     console.log("\n" + "-------------------------------------------" + "\n");
                 }
 
+                // this pushes the guessed letter into the correct guess array if it is correct and hasn't been guessed yet.
                 else if (randomWord.includes(letterGuessed) && !correctGuess.includes(letterGuessed))
                 {
                     correctGuess.push(letterGuessed);
@@ -91,6 +93,7 @@ function wordGenerator()
                     console.log("\n" + "-------------------------------------------" + "\n");
                 }
 
+                // this checks to see if incorrect letter has already been guessed.
                 else if (!randomWord.includes(letterGuessed) && incorrectGuess.includes(letterGuessed))
                 {
                     console.log("\n");
@@ -101,6 +104,7 @@ function wordGenerator()
                     console.log("\n" + "-------------------------------------------" + "\n");
                 }
 
+                // this pushes the guessed letter into the incorrect guess array if it is incorrect and hasn't been guessed yet.
                 else
                 {
                     incorrectGuess.push(letterGuessed);
@@ -130,7 +134,7 @@ function wordGenerator()
                     console.log("\n" + "-------------------------------------------" + "\n");
                     wins++;
                     console.log("Wins: " + wins);
-                    console.log("loses: " + losses);
+                    console.log("losses: " + losses);
                     console.log("\n" + "-------------------------------------------" + "\n");
                     guessesLeft = 9;
                     incorrectGuess = [];
@@ -145,7 +149,7 @@ function wordGenerator()
                     console.log("\n" + "-------------------------------------------" + "\n");
                     losses++;
                     console.log("Wins: " + wins);
-                    console.log("loses: " + losses);
+                    console.log("losses: " + losses);
                     console.log("\n" + "-------------------------------------------" + "\n");
                     guessesLeft = 9;
                     incorrectGuess = [];
