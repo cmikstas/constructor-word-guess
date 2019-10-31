@@ -19,7 +19,9 @@ If the user has this project on their machine and is in Git Bash they can use it
 
 Please refer to the follow links for help using this project:
 
+* Initiate Word Guess Game: https://github.com/cmikstas/constructor-word-guess/blob/master/projectHelp/initiate-word-guess.gif
 
+* Game play Demo: https://github.com/cmikstas/constructor-word-guess/blob/master/projectHelp/word-guess-demo.gif
 
 **Who maintains and contributes to the project?**
 
